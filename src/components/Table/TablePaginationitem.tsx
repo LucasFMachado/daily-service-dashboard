@@ -11,7 +11,10 @@ export function TablePaginationitem({
 }: TablePaginationitemProps) {
   if (isCurrent) {
     return (
-      <button disabled className="bg-red-400 w-8 h-8 text-xs">
+      <button
+        disabled
+        className="bg-red-400 w-8 h-8 text-xs rounded-md text-white"
+      >
         {number}
       </button>
     )
@@ -20,7 +23,7 @@ export function TablePaginationitem({
   return (
     <button
       onClick={() => onPageChange(number)}
-      className="bg-red-500 w-8 h-8 text-xs"
+      className="bg-red-500 w-8 h-8 text-xs rounded-md text-white hover:bg-red-600"
     >
       {number}
     </button>

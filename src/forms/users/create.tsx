@@ -35,7 +35,7 @@ export function CreateUser() {
   }
 
   return (
-    <main className="h-screen p-4 bg-emerald-200 flex items-center justify-center">
+    <main className="h-screen p-4 flex items-center justify-center">
       <Form.Root onSubmit={handleSubmit(submitData)}>
         <Form.Input
           id="name"

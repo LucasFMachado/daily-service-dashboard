@@ -38,6 +38,7 @@ export function ListUsers() {
 
   return (
     <Table.Container>
+      <Table.Title title="Users" route="users" />
       <Table.Root>
         <Table.Head>
           <Table.Line>
@@ -54,13 +55,13 @@ export function ListUsers() {
             <Table.Line key={user.id}>
               <Table.BodyItem>{user.name}</Table.BodyItem>
               <Table.BodyItem>{user.email}</Table.BodyItem>
-              <Table.BodyItem>
+              <Table.BodyItem className="text-center">
                 <Layout.BooleanFlag success={user.active} />
               </Table.BodyItem>
-              <Table.BodyItem>
+              <Table.BodyItem className="text-center">
                 <Layout.BooleanFlag success={user.admin} />
               </Table.BodyItem>
-              <Table.BodyItem>
+              <Table.BodyItem className="text-center">
                 {new Intl.DateTimeFormat('pt-BR').format(
                   new Date(user.created_at),
                 )}

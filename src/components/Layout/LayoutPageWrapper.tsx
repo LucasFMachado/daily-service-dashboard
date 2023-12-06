@@ -8,7 +8,7 @@ interface LayoutPageWrapperProps {
 
 export function LayoutPageWrapper({ children }: LayoutPageWrapperProps) {
   return (
-    <main className="h-screen p-4 bg-slate-200 flex items-center justify-center">
+    <main className="h-screen p-4 flex items-center justify-center">
       {children}
     </main>
   )

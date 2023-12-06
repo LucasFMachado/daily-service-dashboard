@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
-  height: 100vh;
+  @apply text-slate-700 bg-emerald-100 h-screen
 }

@@ -1,11 +1,13 @@
 'use client'
 
 import { ReactNode } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 interface TableBodyItemProps {
   children: ReactNode
+  className?: string
 }
 
-export function TableBodyItem({ children }: TableBodyItemProps) {
-  return <td className={`py-2 px-8`}>{children}</td>
+export function TableBodyItem({ children, className }: TableBodyItemProps) {
+  return <td className={twMerge('py-2', className)}>{children}</td>
 }

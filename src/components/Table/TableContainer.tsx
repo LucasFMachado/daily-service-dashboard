@@ -8,8 +8,8 @@ interface TableContainerProps {
 
 export function TableContainer({ children }: TableContainerProps) {
   return (
-    <main className="h-screen p-4 bg-emerald-100 flex items-center justify-center">
-      <div className="bg-blue-300 rounded">{children}</div>
+    <main className="h-screen p-4 flex items-center justify-center">
+      <div className="bg-slate-300 rounded p-4 w-full">{children}</div>
     </main>
   )
 }

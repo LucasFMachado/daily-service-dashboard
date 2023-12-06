@@ -1,7 +1,6 @@
 'use client'
 
 import { useMutation } from '@tanstack/react-query'
-import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 import { Layout } from '@/components/Layout'
@@ -11,7 +10,6 @@ import { deleteProtocol } from '@/requests/protocols'
 import { queryClient } from '@/services/queryClient'
 
 export function ListProtocols() {
-  const router = useRouter()
   const [page, setPage] = useState(1)
   const { protocols, count, isLoading, isError } = useProtocolList(page)
 
@@ -40,10 +38,7 @@ export function ListProtocols() {
 
   return (
     <Table.Container>
-      <Layout.DefaultButton
-        label="Create"
-        onClick={() => router.push('/protocols/create')}
-      />
+      <Table.Title title="Protocols" route="protocols" />
       <Table.Root>
         <Table.Head>
           <Table.Line>

@@ -13,7 +13,7 @@ export function TableActions({ id, route, onDelete }: TableActionsProps) {
   const router = useRouter()
 
   return (
-    <td className="flex items-center justify-center gap-3 py-2 px-8">
+    <td className="flex items-center justify-center gap-3 py-2">
       <button onClick={() => router.push(`/${route}/${id}`)}>
         <BiSolidPencil className="text-green-700 text-xl" />
       </button>

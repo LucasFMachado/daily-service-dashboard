@@ -17,6 +17,7 @@ export function FormCancelButton({
 
   return (
     <button
+      type="button"
       className="w-full bg-red-500 text-white h-10 rounded-lg hover:bg-red-600 transition"
       onClick={handleRedirect}
       {...props}

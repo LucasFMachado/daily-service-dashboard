@@ -6,6 +6,8 @@ import { ReactNode } from 'react'
 
 import { queryClient } from '@/services/queryClient'
 
+import { SidebarProvider } from './SidebarContext'
+
 interface ContextsProvidersProps {
   children: ReactNode
 }
@@ -13,8 +15,10 @@ interface ContextsProvidersProps {
 export function ContextsProviders({ children }: ContextsProvidersProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
-      <ReactQueryDevtools initialIsOpen={false} />
+      <SidebarProvider>
+        {children}
+        <ReactQueryDevtools initialIsOpen={false} />
+      </SidebarProvider>
     </QueryClientProvider>
   )
 }

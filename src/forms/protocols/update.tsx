@@ -51,7 +51,7 @@ export function UpdateProtocol({ protocolId }: UpdateProtocolProps) {
   }
 
   return (
-    <main className="h-screen p-4 bg-emerald-200 flex items-center justify-center">
+    <main className="h-screen p-4 flex items-center justify-center">
       <Form.Root onSubmit={handleSubmit(submitData)}>
         <Form.Select
           id="situation_id"

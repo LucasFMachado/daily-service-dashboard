@@ -46,13 +46,13 @@ export function TablePagination({
       : totalRegister
 
   return (
-    <div className="flex justify-between text-center gap-4">
+    <div className="flex justify-between text-center gap-4 pt-2">
       <div>
         <strong>{firstRegisterOnPage + 1}</strong> -{' '}
         <strong>{lastRegisterOnPage}</strong> de{' '}
         <strong>{totalRegister}</strong>
       </div>
-      <div className="flex">
+      <div className="flex gap-1">
         {currentPage > 1 + siblingsCount && (
           <>
             <TablePaginationitem number={1} onPageChange={onPageChange} />

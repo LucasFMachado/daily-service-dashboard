@@ -7,5 +7,5 @@ interface TableHeadItemProps {
 }
 
 export function TableHeadItem({ children }: TableHeadItemProps) {
-  return <th className="py-2 px-8">{children}</th>
+  return <th className="text-center">{children}</th>
 }
